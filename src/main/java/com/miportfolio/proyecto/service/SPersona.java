@@ -15,14 +15,7 @@ public class SPersona {
     public RPersona persoRepo;
     
 
-    public Persona loginPersona(String email, String clave) {
-List <Persona> personas = persoRepo.findByEmailAndClave(email, clave);
-if(!personas.isEmpty()){
-return personas.get(0); //si la lista no esta vacia me devuelve la de la posicion 0
-}
-return null;
-}
-    
+
     
     public List<Persona> verPersonas() {
       
@@ -48,9 +41,13 @@ return null;
         persoRepo.save(per);
     }
 
-
-
-
+       public Persona loginPersona(String email, String clave) {
+List <Persona> personas = persoRepo.findByEmailAndClave(email, clave);
+if(!personas.isEmpty()){
+return personas.get(0); //si la lista no esta vacia me devuelve la de la posicion 0
+}
+return null;
+}
 }
 
   
