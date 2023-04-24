@@ -7,18 +7,17 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
-import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter 
 @Setter
 @Entity
-@Table(name= "Persona")
+//@Table(name= "Persona")
 public class Persona {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     
     private String nombre;
     private String apellido;
@@ -45,15 +44,15 @@ public class Persona {
         this.clave = clave;
     }
 
-    @Lob
-    private String email;
-      public String getEmail() {
+    public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
     }
+    @Lob
+    private String email;
 
     public Persona() {
     }
@@ -72,11 +71,11 @@ public class Persona {
         this.email = email;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
