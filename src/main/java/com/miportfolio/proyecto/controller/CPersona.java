@@ -24,11 +24,6 @@ public class CPersona {
     @Autowired    
     SPersona persoServ;
     
-    //login
-    @PostMapping("/autenticacion/login")
-    public Persona loginPersona(@RequestBody Persona pers){
-        return persoServ.loginPersona(pers.getEmail(), pers.getClave());
-    }
     
     
 @GetMapping ("/lista")
@@ -61,5 +56,10 @@ public List <Persona> verPersonas(){
         //persoServ.save(pers)
         persoServ.editarPersona(pers);
         return "La persona fue actualizada correctamente";
+    }
+    //login
+    @PostMapping("/autenticacion/login")
+    public Persona loginPersona(@RequestBody Persona pers){
+        return persoServ.loginPersona(pers.getEmail(), pers.getClave());
     }
 }
