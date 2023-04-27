@@ -6,6 +6,7 @@ com\miportfolio\proyecto\entity\Habilidad.class
 com\miportfolio\proyecto\entity\Educacion.class
 com\miportfolio\proyecto\repository\RExperiencia.class
 com\miportfolio\proyecto\ProyectoApplication.class
+com\miportfolio\proyecto\WebConfig.class
 com\miportfolio\proyecto\repository\RPersona.class
 com\miportfolio\proyecto\controller\CProyecto.class
 com\miportfolio\proyecto\entity\Proyecto.class
